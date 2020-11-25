@@ -1,0 +1,9 @@
+bin/
+obj/
+/packages/
+
+# OSX
+.DS_Store
+
+# IDE
+.idea/
