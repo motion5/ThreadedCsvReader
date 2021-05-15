@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Jobs;
 
-namespace ThreadedCsvReader.Benchmark
+namespace ThreadedCsvReader.Benchmark.Example
 {
     [SimpleJob(RuntimeMoniker.NetCoreApp30)]
     [SimpleJob(RuntimeMoniker.CoreRt30)]

@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using CsvHelper;
 using ThreadedCsvReader.Data.Mappers;
+using ThreadedCsvReader.Data.Mappers.CsvParser;
 using ThreadedCsvReader.Data.Models;
 using ThreadedCsvReader.Events;
 

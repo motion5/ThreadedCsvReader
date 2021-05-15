@@ -3,7 +3,7 @@ using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Order;
 using ThreadedCsvReader.Parsers;
 
-namespace ThreadedCsvReader.Benchmark
+namespace ThreadedCsvReader.Benchmark.Example
 {
     [MemoryDiagnoser]
     [Orderer(SummaryOrderPolicy.FastestToSlowest)]

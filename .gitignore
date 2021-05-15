@@ -7,3 +7,6 @@ obj/
 
 # IDE
 .idea/
+
+# data folder with big csv files
+data

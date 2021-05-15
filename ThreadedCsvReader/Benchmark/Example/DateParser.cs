@@ -1,6 +1,6 @@
 using System;
 
-namespace ThreadedCsvReader.Parsers
+namespace ThreadedCsvReader.Benchmark.Example
 {
     public class DateParser
     {

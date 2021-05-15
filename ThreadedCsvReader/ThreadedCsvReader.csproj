@@ -9,11 +9,24 @@
         <PackageReference Include="BenchmarkDotNet" Version="0.12.1" />
         <PackageReference Include="CsvHelper" Version="16.1.0" />
         <PackageReference Include="System.Diagnostics.Tracing" Version="4.3.0" />
+        <PackageReference Include="TinyCsvParser" Version="2.6.0" />
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="../data/Binance_BTCUSDT_1h.csv">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <Content Include="..\data\Binance_BTCUSDT_1h.csv">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="..\data\100000 Sales Records.csv">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="..\data\500000 Sales Records.csv">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="..\data\1500000 Sales Records.csv">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="..\data\5m Sales Records.csv">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
 </Project>
