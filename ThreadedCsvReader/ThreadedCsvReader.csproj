@@ -6,8 +6,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="CsvHelper" Version="16.1.0" />
-      <PackageReference Include="System.Diagnostics.Tracing" Version="4.3.0" />
+        <PackageReference Include="BenchmarkDotNet" Version="0.12.1" />
+        <PackageReference Include="CsvHelper" Version="16.1.0" />
+        <PackageReference Include="System.Diagnostics.Tracing" Version="4.3.0" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Content Include="../data/Binance_BTCUSDT_1h.csv">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
 </Project>
