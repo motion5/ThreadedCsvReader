@@ -75,7 +75,6 @@ namespace ThreadedCsvReader
 
         public async Task EntryPoint()
         {
-            
             var test = ProcessCsvEventCounterSource.Value;
             
             ThreadPool.GetMinThreads(out var minWorkerThreads, out var minCompletionPortThreads);

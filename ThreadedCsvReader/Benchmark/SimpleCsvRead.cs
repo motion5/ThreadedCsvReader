@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Exporters.Csv;
 using BenchmarkDotNet.Jobs;
@@ -35,15 +37,15 @@ namespace ThreadedCsvReader.Benchmark
             csvParser.Run<BitcoinTetherCsvRow, BitcoinTetherCsvRowMap>(
                 $"{Environment.CurrentDirectory}/Binance_BTCUSDT_1h.csv");
 
-        [Benchmark]
+        //[Benchmark]
         public IEnumerable<SalesRecords> CsvParse500KSalesRecords() =>
             csvParser.Run<SalesRecords, SalesRecordsRowMap>($"{Environment.CurrentDirectory}/100000 Sales Records.csv");
         
-        [Benchmark]
+        //[Benchmark]
         public IEnumerable<SalesRecords> TinyCsvParse500KSalesRecords() =>
             tinyCsvParser.RunSequential($"{Environment.CurrentDirectory}/100000 Sales Records.csv");
         
-        [Benchmark]
+        //[Benchmark]
         public IEnumerable<SalesRecords> TinyCsvParse500KSalesRecordsParallel() =>
             tinyCsvParser.RunParallel($"{Environment.CurrentDirectory}/100000 Sales Records.csv");
         
