@@ -23,11 +23,11 @@ namespace ThreadedCsvReader
     {
         static async Task Main(string[] args)
         {
-            var path = $"{Environment.CurrentDirectory}/100000 Sales Records.csv";
+            var path = $"{Environment.CurrentDirectory}/5m Sales Records.csv";
 
             //BenchmarkRunner.Run<SimpleCsvRead>(new DebugInProcessConfig());
-            //RunTinyCsvParser(path);
-            await RunParallelParser(path);
+            RunTinyCsvParser(path);
+            //await RunParallelParser(path);
             
             return;
             var parserOptions = new CsvParserOptions(false, ',');
@@ -54,7 +54,7 @@ namespace ThreadedCsvReader
             var stopwatch = Stopwatch.StartNew();
             
             var csvReader = new TinyCsvParser<SalesRecords, SalesRecordsMapping>();
-            var output = csvReader.RunSequential(path);
+            var output = csvReader.RunParallel(path);
 
             stopwatch.Stop();
             Console.WriteLine($"Parsed {output.Count()} lines in {stopwatch.Elapsed.Seconds} seconds");
@@ -75,7 +75,7 @@ namespace ThreadedCsvReader
             
             var parallelParser =
                 new ParallelParser<SalesRecords, SalesRecordsMapping>();
-            parallelParser.SemaphoreInit(minWorkerThreads, 16);
+            parallelParser.SemaphoreInit(minWorkerThreads, 17);
             var output = await parallelParser.RunAsync(path);
 
             stopwatch.Stop();

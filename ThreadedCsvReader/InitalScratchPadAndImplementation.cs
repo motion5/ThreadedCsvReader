@@ -15,7 +15,11 @@ using ThreadedCsvReader.Events;
 
 namespace ThreadedCsvReader
 {
-    public class Handlers
+/**
+ * This is the first stuff that was written as part of this idea
+ * It provides a reminder of inspiration
+ */
+    public class InitalScratchPadAndImplementation
     {
         private static SemaphoreSlim semaphore;
 
